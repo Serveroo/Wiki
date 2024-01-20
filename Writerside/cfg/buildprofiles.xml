@@ -2,11 +2,20 @@
 <buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <variables></variables>
+    <variables>
+        <primary-color>ruby</primary-color>
+        <custom-favicons>icon.svg</custom-favicons>
+        <header-logo>icon.svg</header-logo>
+        <download-title>Aller sur serveroo.fr</download-title>
+        <download-page>https://serveroo.fr</download-page>
+        <showDownloadButton>true</showDownloadButton>
+    </variables>
     <build-profile instance="wiki">
         <variables>
             <noindex-content>false</noindex-content>
         </variables>
     </build-profile>
-
+    <footer>
+        <copyright>Serveroo - 2024</copyright>
+    </footer>
 </buildprofiles>
