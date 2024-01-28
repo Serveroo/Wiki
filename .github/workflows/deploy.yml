@@ -46,9 +46,8 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            sudo -i
-            rm -rf ${{ secrets.DEPLOYMENT_TARGET }}
-            mkdir ${{ secrets.DEPLOYMENT_TARGET }}
-            mv ${{ secrets.REMOTE_TARGET }}/${{ env.ARTIFACT }} ${{ secrets.DEPLOYMENT_TARGET }}
-            unzip ${{ secrets.DEPLOYMENT_TARGET }}/${{ env.ARTIFACT }}
+            sudo rm -rf ${{ secrets.DEPLOYMENT_TARGET }}
+            sudo mkdir ${{ secrets.DEPLOYMENT_TARGET }}
+            sudo mv ${{ secrets.REMOTE_TARGET }}/${{ env.ARTIFACT }} ${{ secrets.DEPLOYMENT_TARGET }}
+            sudo unzip ${{ secrets.DEPLOYMENT_TARGET }}/${{ env.ARTIFACT }}
    
