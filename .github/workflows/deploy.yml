@@ -1,0 +1,53 @@
+name: Build documentation
+
+on:
+#  push:
+#    branches: [ "master" ]
+  workflow_dispatch:
+
+env:
+  # Name of module and id separated by a slash
+  INSTANCE: Writerside/wiki
+  # Replace HI with the ID of the instance in capital letters
+  ARTIFACT: webHelpWIKI2-all.zip
+  # Writerside docker image version
+  DOCKER_VERSION: 233.14272
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Writerside docs using Docker
+        uses : JetBrains/writerside-github-action@v4
+        with:
+          instance: ${{ env.INSTANCE }}
+          artifact: ${{ env.ARTIFACT }}
+          docker-version: ${{ env.DOCKER_VERSION }}
+
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: ${{ env.ARTIFACT }}
+          REMOTE_HOST: ${{ secrets.HOST }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          REMOTE_PORT: ${{ secrets.PORT }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
+
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            sudo rm -rf /var/www/wiki
+            mkdir /var/www/wiki
+            mv ${{ env.ARTIFACT }} /var/www/wiki
+            unzip /var/www/wiki/${{ env.ARTIFACT }}
+   
