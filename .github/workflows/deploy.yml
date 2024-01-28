@@ -27,6 +27,9 @@ jobs:
           artifact: ${{ env.ARTIFACT }}
           docker-version: ${{ env.DOCKER_VERSION }}
 
+      - name: Display artifact
+        run: ls
+
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         with:
