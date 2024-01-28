@@ -1,9 +1,9 @@
 name: Build documentation
 
 on:
-#  push:
-#    branches: [ "master" ]
   workflow_dispatch:
+  push:
+    branches: [ "main" ]
 
 env:
   # Name of module and id separated by a slash
