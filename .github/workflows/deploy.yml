@@ -39,5 +39,15 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           REMOTE_PORT: ${{ secrets.PORT }}
-          TARGET: ${{ secrets.DEPLOYMENT_TARGET }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
    
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            sudo rm -rf ${{ secrets.DEPLOYMENT_TARGET }}
+            sudo mv ${{ secrets.REMOTE_TARGET }}/wiki ${{ secrets.DEPLOYMENT_TARGET }}
