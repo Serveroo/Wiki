@@ -28,7 +28,7 @@ jobs:
           docker-version: ${{ env.DOCKER_VERSION }}
 
       - name: Display artifact
-        run: ls
+        run: cd Writerside && ls
 
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
