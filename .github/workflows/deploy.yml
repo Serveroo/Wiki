@@ -36,6 +36,9 @@ jobs:
           artifact: ${{ env.ARTIFACT_EN }}
           docker-version: ${{ env.DOCKER_VERSION }}
 
+      - name: Display artifacts
+        run: ls -la artifacts
+
       - name: Unzip artifact
         run: unzip -q artifacts/${{ env.ARTIFACT_FR }} -d wiki/fr && unzip -q artifacts/${{ env.ARTIFACT_EN }} -d wiki/en
 
