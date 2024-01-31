@@ -29,6 +29,9 @@ jobs:
           artifact: ${{ env.ARTIFACT_FR }}
           docker-version: ${{ env.DOCKER_VERSION }}
 
+      - name: Unzip artifact
+        run: unzip -q artifacts/${{ env.ARTIFACT_FR }} -d wiki/fr
+
       - name: Build Writerside docs using Docker
         uses: JetBrains/writerside-github-action@v4
         with:
@@ -36,11 +39,8 @@ jobs:
           artifact: ${{ env.ARTIFACT_EN }}
           docker-version: ${{ env.DOCKER_VERSION }}
 
-      - name: Display artifacts
-        run: ls -la artifacts
-
       - name: Unzip artifact
-        run: unzip -q artifacts/${{ env.ARTIFACT_FR }} -d wiki/fr && unzip -q artifacts/${{ env.ARTIFACT_EN }} -d wiki/en
+        run: unzip -q artifacts/${{ env.ARTIFACT_EN }} -d wiki/en
 
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
