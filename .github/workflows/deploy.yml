@@ -30,7 +30,7 @@ jobs:
           docker-version: ${{ env.DOCKER_VERSION }}
 
       - name: Unzip artifact
-        run: unzip -q artifacts/${{ env.ARTIFACT_FR }} -d wiki/fr
+        run: mkdir wiki && unzip -q artifacts/${{ env.ARTIFACT_FR }} -d wiki/fr
 
       - name: Build Writerside docs using Docker
         uses: JetBrains/writerside-github-action@v4
