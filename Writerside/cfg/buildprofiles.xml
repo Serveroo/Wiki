@@ -18,4 +18,9 @@
     <footer>
         <copyright>Serveroo - 2024</copyright>
     </footer>
+    <build-profile instance="wiki-en">
+        <variables>
+            <noindex-content>false</noindex-content>
+        </variables>
+    </build-profile>
 </buildprofiles>

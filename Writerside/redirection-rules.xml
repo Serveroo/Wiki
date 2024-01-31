@@ -6,24 +6,4 @@
         <accepts>page.html</accepts>
     </rule>
     -->
-    <rule id="54547a41">
-        <description>Created after removal of "Starter" from Wiki Serveroo</description>
-        <accepts>Starter.html</accepts>
-    </rule>
-    <rule id="5a41c541">
-        <description>Created after removal of "How to" from Wiki Serveroo</description>
-        <accepts>How-to.html</accepts>
-    </rule>
-    <rule id="72c288a5">
-        <description>Created after removal of "Tutorial" from Wiki Serveroo</description>
-        <accepts>Tutorial.html</accepts>
-    </rule>
-    <rule id="38a7b84">
-        <description>Created after removal of "About Wiki Serveroo" from Wiki Serveroo</description>
-        <accepts>starter-topic.html</accepts>
-    </rule>
-    <rule id="33f7084c">
-        <description>Created after removal of "Node" from Wiki Serveroo</description>
-        <accepts>Node.html</accepts>
-    </rule>
 </rules>
