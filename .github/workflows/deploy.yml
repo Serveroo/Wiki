@@ -14,10 +14,19 @@ env:
   ARTIFACT_EN: webHelpWIKI-EN2-all.zip
   # Writerside docker image version
   DOCKER_VERSION: 233.14272
+  # Algolia
+  ALGOLIA_APP_NAME: QI35XH8YI5
+  ALGOLIA_INDEX_NAME_FR: Wiki FR
+  ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
+  ALGOLIA_ARTIFACT_FR: algolia-indexes-WIKI.zip
+  CONFIG_JSON_PRODUCT_FR: wiki
+  CONFIG_JSON_VERSION_FR: 0.0.1
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: registry.jetbrains.team/p/writerside/builder/algolia-publisher:2.0.32-2
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -30,7 +39,7 @@ jobs:
           docker-version: ${{ env.DOCKER_VERSION }}
 
       - name: Unzip artifact
-        run: mkdir wiki && unzip -q artifacts/${{ env.ARTIFACT_FR }} -d wiki/fr
+        run: mkdir wiki && unzip -q artifacts/${{ env.ARTIFACT_FR }} -d wiki/fr && mkdir algolia && unzip -q artifacts/${{ env.ALGOLIA_ARTIFACT_FR }} -d algolia/fr
 
       - name: Build Writerside docs using Docker
         uses: JetBrains/writerside-github-action@v4
@@ -41,6 +50,18 @@ jobs:
 
       - name: Unzip artifact
         run: unzip -q artifacts/${{ env.ARTIFACT_EN }} -d wiki/en
+
+      - name: Unzip artifact
+        run: |
+          unzip -O UTF-8 -qq ${{ env.ALGOLIA_ARTIFACT_FR }} -d algolia-indexes
+          env "algolia-key=${{env.ALGOLIA_KEY}}" java -jar /opt/builder/help-publication-agent.jar \
+          update-index \
+          --application-name ${{env.ALGOLIA_APP_NAME}} \
+          --index-name ${{env.ALGOLIA_INDEX_NAME_FR}} \
+          --product ${{env.CONFIG_JSON_PRODUCT_FR}} \
+          --version ${{env.CONFIG_JSON_VERSION_FR}} \
+          --index-directory algolia/fr/ \
+          2>&1 | tee algolia-update-index-log.txt
 
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
