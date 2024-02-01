@@ -25,8 +25,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: registry.jetbrains.team/p/writerside/builder/algolia-publisher:2.0.32-2
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -84,3 +82,31 @@ jobs:
           script: |
             sudo rm -rf ${{ secrets.DEPLOYMENT_TARGET }}
             sudo mv ${{ secrets.REMOTE_TARGET }}/wiki ${{ secrets.DEPLOYMENT_TARGET }}
+
+  publish-indexes:
+    # Requires the build-job results
+    needs: build
+    runs-on: ubuntu-latest
+    container:
+      image: registry.jetbrains.team/p/writerside/builder/algolia-publisher:2.0.32-2
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: algolia-indexes
+      - name: Display files
+        run: ls -la
+      - name: Display algolia-indexes files
+        run: ls -la algolia-indexes
+      - name: Unzip artifact
+        run: |
+          unzip -O UTF-8 -qq ${{ env.ALGOLIA_ARTIFACT_FR }} -d algolia-indexes
+          env "algolia-key=${{env.ALGOLIA_KEY}}" java -jar /opt/builder/help-publication-agent.jar \
+          update-index \
+          --application-name ${{env.ALGOLIA_APP_NAME}} \
+          --index-name ${{env.ALGOLIA_INDEX_NAME_FR}} \
+          --product ${{env.CONFIG_JSON_PRODUCT_FR}} \
+          --version ${{env.CONFIG_JSON_VERSION_FR}} \
+          --index-directory algolia-indexes/ \
+          2>&1 | tee algolia-update-index-log.txt
