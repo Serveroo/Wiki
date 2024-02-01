@@ -14,7 +14,7 @@
         <variables>
             <noindex-content>false</noindex-content>
             <algolia-id>QI35XH8YI5</algolia-id>
-            <algolia-index>Wiki FR</algolia-index>
+            <algolia-index>Wiki-FR</algolia-index>
             <algolia-api-key>3294698e4759b21c12748cf95606bc39</algolia-api-key>
             <web-root>https://wiki.serveroo.fr/fr</web-root>
         </variables>
