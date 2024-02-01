@@ -92,8 +92,6 @@ jobs:
           name: algolia-indexes-fr
       - name: Display files
         run: ls -la
-      - name: Display algolia-indexes files
-        run: ls -la algolia-indexes-fr
       - name: Unzip artifact
         run: |
           unzip -O UTF-8 -qq ${{ env.ALGOLIA_ARTIFACT_FR }} -d algolia-indexes-fr
