@@ -37,7 +37,14 @@ jobs:
           docker-version: ${{ env.DOCKER_VERSION }}
 
       - name: Unzip artifact
-        run: mkdir wiki && unzip -q artifacts/${{ env.ARTIFACT_FR }} -d wiki/fr && mkdir algolia && unzip -q artifacts/${{ env.ALGOLIA_ARTIFACT_FR }} -d algolia/fr
+        run: mkdir wiki && unzip -q artifacts/${{ env.ARTIFACT_FR }} -d wiki/fr
+
+      - name: Upload algolia-indexes
+        uses: actions/upload-artifact@v3
+        with:
+          name: algolia-indexes-fr
+          path: artifacts/${{ env.ALGOLIA_ARTIFACT_FR }}
+          retention-days: 7
 
       - name: Build Writerside docs using Docker
         uses: JetBrains/writerside-github-action@v4
@@ -82,19 +89,19 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: algolia-indexes
+          name: algolia-indexes-fr
       - name: Display files
         run: ls -la
       - name: Display algolia-indexes files
-        run: ls -la algolia-indexes
+        run: ls -la algolia-indexes-fr
       - name: Unzip artifact
         run: |
-          unzip -O UTF-8 -qq ${{ env.ALGOLIA_ARTIFACT_FR }} -d algolia-indexes
+          unzip -O UTF-8 -qq ${{ env.ALGOLIA_ARTIFACT_FR }} -d algolia-indexes-fr
           env "algolia-key=${{env.ALGOLIA_KEY}}" java -jar /opt/builder/help-publication-agent.jar \
           update-index \
           --application-name ${{env.ALGOLIA_APP_NAME}} \
           --index-name ${{env.ALGOLIA_INDEX_NAME_FR}} \
           --product ${{env.CONFIG_JSON_PRODUCT_FR}} \
           --version ${{env.CONFIG_JSON_VERSION_FR}} \
-          --index-directory algolia-indexes/ \
+          --index-directory algolia-indexes-fr/ \
           2>&1 | tee algolia-update-index-log.txt
