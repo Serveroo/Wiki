@@ -49,39 +49,27 @@ jobs:
       - name: Unzip artifact
         run: unzip -q artifacts/${{ env.ARTIFACT_EN }} -d wiki/en
 
-      - name: Unzip artifact
-        run: |
-          unzip -O UTF-8 -qq ${{ env.ALGOLIA_ARTIFACT_FR }} -d algolia-indexes
-          env "algolia-key=${{env.ALGOLIA_KEY}}" java -jar /opt/builder/help-publication-agent.jar \
-          update-index \
-          --application-name ${{env.ALGOLIA_APP_NAME}} \
-          --index-name ${{env.ALGOLIA_INDEX_NAME_FR}} \
-          --product ${{env.CONFIG_JSON_PRODUCT_FR}} \
-          --version ${{env.CONFIG_JSON_VERSION_FR}} \
-          --index-directory algolia/fr/ \
-          2>&1 | tee algolia-update-index-log.txt
-
-      - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@main
-        with:
-          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
-          ARGS: "-rlgoDzvc -i --delete"
-          SOURCE: wiki
-          REMOTE_HOST: ${{ secrets.HOST }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          REMOTE_PORT: ${{ secrets.PORT }}
-          TARGET: ${{ secrets.REMOTE_TARGET }}
-   
-      - name: executing remote ssh commands using password
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            sudo rm -rf ${{ secrets.DEPLOYMENT_TARGET }}
-            sudo mv ${{ secrets.REMOTE_TARGET }}/wiki ${{ secrets.DEPLOYMENT_TARGET }}
+#      - name: Deploy to Server
+#        uses: easingthemes/ssh-deploy@main
+#        with:
+#          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+#          ARGS: "-rlgoDzvc -i --delete"
+#          SOURCE: wiki
+#          REMOTE_HOST: ${{ secrets.HOST }}
+#          REMOTE_USER: ${{ secrets.USERNAME }}
+#          REMOTE_PORT: ${{ secrets.PORT }}
+#          TARGET: ${{ secrets.REMOTE_TARGET }}
+#
+#      - name: executing remote ssh commands using password
+#        uses: appleboy/ssh-action@v1.0.3
+#        with:
+#          host: ${{ secrets.HOST }}
+#          username: ${{ secrets.USERNAME }}
+#          key: ${{ secrets.KEY }}
+#          port: ${{ secrets.PORT }}
+#          script: |
+#            sudo rm -rf ${{ secrets.DEPLOYMENT_TARGET }}
+#            sudo mv ${{ secrets.REMOTE_TARGET }}/wiki ${{ secrets.DEPLOYMENT_TARGET }}
 
   publish-indexes:
     # Requires the build-job results
