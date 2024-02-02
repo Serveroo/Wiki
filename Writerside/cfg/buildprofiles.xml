@@ -25,6 +25,10 @@
     <build-profile instance="wiki-en">
         <variables>
             <noindex-content>false</noindex-content>
+            <algolia-id>QI35XH8YI5</algolia-id>
+            <algolia-index>Wiki-EN</algolia-index>
+            <algolia-api-key>3294698e4759b21c12748cf95606bc39</algolia-api-key>
+            <web-root>https://wiki.serveroo.fr/en</web-root>
         </variables>
     </build-profile>
 </buildprofiles>
