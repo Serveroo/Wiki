@@ -119,7 +119,7 @@ jobs:
           name: algolia-indexes-en
       - name: Unzip artifact
         run: |
-          unzip -O UTF-8 -qq ${{ env.ALGOLIA_ARTIFACT_FR }} -d algolia-indexes-en
+          unzip -O UTF-8 -qq ${{ env.ALGOLIA_ARTIFACT_EN }} -d algolia-indexes-en
           env "algolia-key=${{env.ALGOLIA_KEY}}" java -jar /opt/builder/help-publication-agent.jar \
           update-index \
           --application-name ${{env.ALGOLIA_APP_NAME}} \
