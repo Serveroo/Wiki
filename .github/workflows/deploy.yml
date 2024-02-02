@@ -64,7 +64,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: algolia-indexes-en
-          path: artifacts/${{ env.ALGOLIA_ARTIFACT_FR }}
+          path: artifacts/${{ env.ALGOLIA_ARTIFACT_EN }}
           retention-days: 7
 
       - name: Deploy to Server
