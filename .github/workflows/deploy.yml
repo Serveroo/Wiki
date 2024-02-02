@@ -17,10 +17,14 @@ env:
   # Algolia
   ALGOLIA_APP_NAME: QI35XH8YI5
   ALGOLIA_INDEX_NAME_FR: Wiki-FR
+  ALGOLIA_INDEX_NAME_EN: Wiki-EN
   ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
   ALGOLIA_ARTIFACT_FR: algolia-indexes-WIKI.zip
   CONFIG_JSON_PRODUCT_FR: fr
   CONFIG_JSON_VERSION_FR: 0.0.1
+  ALGOLIA_ARTIFACT_EN: algolia-indexes-WIKI-EN.zip
+  CONFIG_JSON_PRODUCT_EN: en
+  CONFIG_JSON_VERSION_EN: 0.0.1
 
 jobs:
   build:
@@ -44,6 +48,13 @@ jobs:
         with:
           name: algolia-indexes-fr
           path: artifacts/${{ env.ALGOLIA_ARTIFACT_FR }}
+          retention-days: 7
+
+      - name: Upload algolia-indexes
+        uses: actions/upload-artifact@v3
+        with:
+          name: algolia-indexes-en
+          path: artifacts/${{ env.ALGOLIA_ARTIFACT_EN }}
           retention-days: 7
 
       - name: Build Writerside docs using Docker
@@ -90,8 +101,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: algolia-indexes-fr
-      - name: Display files
-        run: ls -la
       - name: Unzip artifact
         run: |
           unzip -O UTF-8 -qq ${{ env.ALGOLIA_ARTIFACT_FR }} -d algolia-indexes-fr
@@ -102,4 +111,20 @@ jobs:
           --product ${{env.CONFIG_JSON_PRODUCT_FR}} \
           --version ${{env.CONFIG_JSON_VERSION_FR}} \
           --index-directory algolia-indexes-fr/ \
+          2>&1 | tee algolia-update-index-log.txt
+
+      - name: Download artifact EN
+        uses: actions/download-artifact@v3
+        with:
+          name: algolia-indexes-en
+      - name: Unzip artifact
+        run: |
+          unzip -O UTF-8 -qq ${{ env.ALGOLIA_ARTIFACT_FR }} -d algolia-indexes-en
+          env "algolia-key=${{env.ALGOLIA_KEY}}" java -jar /opt/builder/help-publication-agent.jar \
+          update-index \
+          --application-name ${{env.ALGOLIA_APP_NAME}} \
+          --index-name ${{env.ALGOLIA_INDEX_NAME_EN}} \
+          --product ${{env.CONFIG_JSON_PRODUCT_EN}} \
+          --version ${{env.CONFIG_JSON_VERSION_EN}} \
+          --index-directory algolia-indexes-en/ \
           2>&1 | tee algolia-update-index-log.txt
