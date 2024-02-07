@@ -2,13 +2,13 @@
 
 ## Mention Légales
 
-Le présent site est édité par **Serveroo**, une société **[forme juridique]** au capital de **[montant du capital social]**, immatriculée au Registre du Commerce et des Sociétés de [ville d'immatriculation] sous le numéro **[numéro d'immatriculation]** et dont le siège social est situé **[adresse du siège social]**.
+Le présent site est édité par **Serveroo**, une société **étudiante** au capital de **0€**, non immatriculée au Registre du Commerce et des Sociétéset dont le siège social est situé au **48 rue Solférino, 59000 Lille**.
 
-Directeur de la publication : **[nom et prénom du directeur de la publication]**
+Directeur de la publication : **Nicolas Barrat**
 
-Contact : **[adresse email ou postale de contact]**
+Contact : **nicolas.barrat@student.junia.com**
 
-Hébergeur du site : **[nom et adresse de l'hébergeur du site]**
+Hébergeur du site : **Florian Spinnewyn**
 
 ### Conditions d'utilisation
 
@@ -20,7 +20,7 @@ Le présent site et l'ensemble de son contenu (notamment les textes, images, log
 
 ### Données personnelles
 
-Les informations collectées sur le site sont destinées à **Serveroo** et peuvent être utilisées pour traiter les demandes des utilisateurs. Conformément à la loi Informatique et Libertés du 6 janvier 1978, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour exercer ce droit, veuillez contacter **[adresse email ou postale de contact]**.
+Les informations collectées sur le site sont destinées à **Serveroo** et peuvent être utilisées pour traiter les demandes des utilisateurs. Conformément à la loi Informatique et Libertés du 6 janvier 1978, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour exercer ce droit, veuillez contacter **nicolas.barrat@student.junia.com**.
 
 ## Conditions Générales
 
@@ -87,7 +87,7 @@ La durée de location des serveurs est déterminée par la confirmation de comma
 
 ### Article 6 : Résiliation
 
-La résiliation de la location des serveurs peut intervenir à tout moment, sous réserve de respecter un préavis de **[nombre de jours]** jours. La résiliation doit être notifiée par courrier recommandé avec accusé de réception ou par email. En cas de résiliation, les sommes déjà payées ne seront pas remboursées.
+La résiliation de la location des serveurs peut intervenir à tout moment, sous réserve de respecter un préavis de **48h**. La résiliation doit être notifiée par courrier recommandé avec accusé de réception ou par email. En cas de résiliation, les sommes déjà payées ne seront pas remboursées.
 
 ### Article 7 : Responsabilité
 
