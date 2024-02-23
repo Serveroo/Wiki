@@ -30,7 +30,7 @@ _Nginx est connu pour sa rapidité, sa flexibilité et sa fiabilité. Il est dev
 
 ## De quels fichiers ai-je besoin au minimum pour faire fonctionner mon site ?
 
-Pour faire fonctionner votre site, tout ce dont vous avez besoin est un fichier index.js a la racine !
+Pour faire fonctionner votre site, tout ce dont vous avez besoin est un fichier index.html a la racine !
 
 ## Une fois chargé, comment accéder a mon site ?
 
