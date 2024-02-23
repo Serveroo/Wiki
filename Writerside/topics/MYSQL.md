@@ -4,9 +4,9 @@
 Mysql est une base de donnée pouvant servir à stocker vos données quelque soit le projet.
 
 ## Comment utiliser ma base de données
-Une fois le service créé, connectez vous avec les identifiants qui vous ont été envoyés par mail avec l'adresse serveroo.fr et le port indiqué par le service.
+Une fois le service créé, connectez vous avec les identifiants qui vous ont été envoyés par mail avec l'adresse _serveroo.fr_ et le port indiqué par le service.
 
-> Accessible uniquement avec votre adresse mail Junia
+> Accessible uniquement avec le wifi Junia student
 {style="warning"}
 
 
