@@ -13,7 +13,7 @@ env:
   ARTIFACT_FR: webHelpWIKI2-all.zip
   ARTIFACT_EN: webHelpWIKI-EN2-all.zip
   # Writerside docker image version
-  DOCKER_VERSION: 233.14272
+  DOCKER_VERSION: 233.14389
   # Algolia
   ALGOLIA_APP_NAME: QI35XH8YI5
   ALGOLIA_INDEX_NAME_FR: Wiki-FR
