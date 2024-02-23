@@ -1,4 +1,4 @@
-# NGINX
+# Nginx
 ## C'est quoi et pourquoi choisir ce produit
 _Nginx est connu pour sa rapidité, sa flexibilité et sa fiabilité. Il est devenu un choix populaire parmi les développeurs web et les administrateurs système pour plusieurs raisons :_
 
