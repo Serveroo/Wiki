@@ -19,8 +19,8 @@ En ce qui concerne l'URL d'accès à votre base de données, vous pouvez la cons
 serveroo.fr:port.
 
 5. Pour connaitre votre port, vous pouvez vous rendre sur la page de votre service dans la rubrique Port. Ce dernier correspond au port externe.
-<img src="port.png"
-   alt="Markdown Monster icon"/>
+   ![Texte alternatif](port.png)
+
 
 
 
