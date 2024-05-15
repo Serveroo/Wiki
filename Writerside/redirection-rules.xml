@@ -6,4 +6,8 @@
         <accepts>page.html</accepts>
     </rule>
     -->
+    <rule id="4a0b09d4">
+        <description>Created after removal of "Produits" from Wiki Serveroo</description>
+        <accepts>UserStorys.html</accepts>
+    </rule>
 </rules>
