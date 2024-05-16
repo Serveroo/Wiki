@@ -19,7 +19,9 @@
 #### Si vous utilisez un serveur MySQL, entrez le code **MYSQL2024**
 ![code_promo](payement.png)
 
-Cliquez sur le "+" à droite du rectangle, si le code que vous avez inséré est bon, la page d'achat ressemblera à cela![validation du code](affichage_final.png)
+Cliquez sur le "+" à droite du rectangle, si le code que vous avez inséré est bon, la page d'achat ressemblera à cela
+
+![validation du code](affichage_final.png)
 
 #### Il ne vous reste plus qu'à cliquer sur "Suivant" et vous aurez la confirmation de la création de votre service.
 ![confirmation](confirmation_achat.png)
