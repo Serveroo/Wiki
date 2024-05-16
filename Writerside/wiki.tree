@@ -6,6 +6,7 @@
                  name="Wiki Serveroo"
                   start-page="Home.md">
 
+    <toc-element topic="Home.md"/>
     <toc-element topic="Produits.md">
         <toc-element topic="NGINX.md"/>
         <toc-element topic="MYSQL.md"/>
@@ -15,7 +16,6 @@
     </toc-element>
     <toc-element topic="FAQ.md"/>
     <toc-element topic="Legal.md"/>
-    <toc-element topic="Home.md"/>
     <toc-element topic="UserStorys.md">
         <toc-element topic="Création-de-compte.md"/>
         <toc-element topic="Sélection-et-configuration-de-serveur.md"/>
