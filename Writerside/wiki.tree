@@ -11,10 +11,10 @@
         <toc-element topic="NGINX.md"/>
         <toc-element topic="MYSQL.md"/>
         <toc-element topic="PHP.md"/>
-        <toc-element topic="Ubuntu.md"/>
         <toc-element topic="Node.md"/>
         <toc-element topic="How-to.md"/>
     </toc-element>
     <toc-element topic="FAQ.md"/>
     <toc-element topic="Legal.md"/>
+    <toc-element topic="TP.md"/>
 </instance-profile>

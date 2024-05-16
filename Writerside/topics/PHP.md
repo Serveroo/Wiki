@@ -26,7 +26,7 @@ Vous pouvez ensuite extraire votre projet depuis la zone fichier du service.
 
 > **Attention**
 >
-> Les noms de fichiers n'acceptent pas les charactères spéciaux ni les espaces.
+> Les noms de fichiers n'acceptent pas les caractères spéciaux ni les espaces.
 >
 {style="warning"}
 
