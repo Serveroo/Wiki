@@ -6,6 +6,10 @@
         <accepts>page.html</accepts>
     </rule>
     -->
+    <rule id="4a0b09d4">
+        <description>Created after removal of "Produits" from Wiki Serveroo</description>
+        <accepts>UserStorys.html</accepts>
+    </rule>
     <rule id="9ed6748">
         <description>Created after removal of "Ubuntu" from Wiki Serveroo</description>
         <accepts>Ubuntu.html</accepts>
