@@ -16,4 +16,4 @@ Pour commencer l'aventure avec Serveroo, rien de plus simple ! Rendez-vous sur [
 
 #### Une fois votre mail validé, vous n'avez plus qu'à revenir sur le site et vous connecter !
 
-## Pour la suite de votre parcours, ça se passe [ici](Sélection-et-configuration-de-serveur.md)
+## Pour la suite de votre parcours, ça se passe [ici](Selection-et-configuration-de-serveur.md)
