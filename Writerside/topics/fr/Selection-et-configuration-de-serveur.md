@@ -25,3 +25,5 @@ Cliquez sur le "+" à droite du rectangle, si le code que vous avez inséré est
 
 Il ne vous reste plus qu'à cliquer sur "Suivant" et vous aurez la confirmation de la création de votre service.
 ![confirmation](confirmation_achat.png)
+
+**Rendez-vous maintenant sur la page [Produits](Produits.md) pour avoir des informations relatives à votre service**
