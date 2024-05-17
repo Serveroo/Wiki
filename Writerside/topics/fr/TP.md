@@ -18,4 +18,9 @@ Modifiez le projet pour que le mot entré soit afficher en minuscule.
 
 - 5ième étape : 
 Compilez et chargez le projet dans Serveroo.
+> **Astuce**
+>
+> Pour compiler votre projet, nous vous conseillons de suivre ce [tutoriel](Compiler-son-script-C.md)
+>
+{style="note"}
 
