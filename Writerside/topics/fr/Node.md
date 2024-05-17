@@ -32,6 +32,9 @@ Vous pouvez ensuite extraire votre projet depuis la zone fichier du service.
 >
 {style="warning"}
 
+Il se peut que le chargement du projet prenne du temps. Nous vous conseillons de redémarrer votre serveur. Vous pouvez également consulter le chargement dans la partie log.
+![log.png](log.png)
+
 
 5. Pour accéder à votre site, il suffit de rentrer l'url de connexion, se trouvant en haut de la page de votre service.
    ![Lien de connexion](lien_connexion_node.png)
