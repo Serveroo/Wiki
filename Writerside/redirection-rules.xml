@@ -6,4 +6,12 @@
         <accepts>page.html</accepts>
     </rule>
     -->
+    <rule id="28f0d4be">
+        <description>Created after removal of "FAQ / Frequently Asked Questions" from Wiki Serveroo</description>
+        <accepts>FAQ.html</accepts>
+    </rule>
+    <rule id="542b3221">
+        <description>Created after removal of "Legal" from Wiki Serveroo</description>
+        <accepts>Legal.html</accepts>
+    </rule>
 </rules>

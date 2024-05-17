@@ -1,6 +1,6 @@
 # MySQL
 
-## Qu'est ce que MYSQL ? 
+## Qu'est-ce que MYSQL ? 
 Mysql est une base de donnée pouvant servir à stocker vos données quelque soit le projet.
 
 ## Comment utiliser ma base de données ?

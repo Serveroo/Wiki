@@ -7,6 +7,12 @@
                   start-page="Home.md">
 
     <toc-element topic="Home.md"/>
+    <toc-element topic="UserStorys.md">
+        <toc-element topic="Creation-de-compte.md"/>
+        <toc-element topic="Selection-et-configuration-de-serveur.md"/>
+        <toc-element topic="Compiler-son-script-C.md"/>
+        <toc-element topic="TP.md"/>
+    </toc-element>
     <toc-element topic="Produits.md">
         <toc-element topic="NGINX.md"/>
         <toc-element topic="MYSQL.md"/>
@@ -16,9 +22,4 @@
     </toc-element>
     <toc-element topic="FAQ.md"/>
     <toc-element topic="Legal.md"/>
-    <toc-element topic="UserStorys.md">
-        <toc-element topic="Creation-de-compte.md"/>
-        <toc-element topic="Selection-et-configuration-de-serveur.md"/>
-    </toc-element>
-    <toc-element topic="TP.md"/>
 </instance-profile>
