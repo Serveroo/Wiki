@@ -14,4 +14,8 @@
         <description>Created after removal of "Legal" from Wiki Serveroo</description>
         <accepts>Legal.html</accepts>
     </rule>
+    <rule id="39e84e8e">
+        <description>Created after removal of "How to" from Wiki Serveroo</description>
+        <accepts>How-to.html</accepts>
+    </rule>
 </rules>
