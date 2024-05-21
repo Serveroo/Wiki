@@ -17,6 +17,8 @@ Pour passer l'étape de paiement, veuillez rentrer le code promotionnel suivant 
 Pour vous connecter à votre base de données, vous avez reçu un mail contenant vos identifiants de connexion. 
 En ce qui concerne l'URL d'accès à votre base de données, vous pouvez la consulter sur la page de votre service. Elle se construit comme suivant :
 serveroo.fr:port.
+Vous pouvez également ce lien sur la page de votre service :
+![Texte_alternatif](lien_connexion_mysql.png)
 
 5. Pour connaitre votre port, vous pouvez vous rendre sur la page de votre service dans la rubrique Port. Ce dernier correspond au port externe.
    ![Texte alternatif](port.png)
