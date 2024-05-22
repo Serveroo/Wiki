@@ -40,3 +40,14 @@ Il se peut que le chargement du projet prenne du temps. Nous vous conseillons de
    ![Lien de connexion](lien_connexion_node.png)
    Cela tombera sur le fichier index.js de votre projet.
    Pour accéder à d'autres pages, il suffit de rentrer l'arborescence des fichiers.
+
+> **Attention**
+>
+> Pour que vous puissez accéder à votre projet, il faut configurer le lancement de votre node sur le port 80
+> ou bien ajouter dans la section *Port* de la page de votre service, le port sur lequel votre node fonctionne.
+> Si vous ajoutez un nouveau port, alors le lien d'accès de votre service sera constitué du nouveau port externe.
+> 
+>
+{style="warning"}
+
+![Ajout port](ajout_port.png)
