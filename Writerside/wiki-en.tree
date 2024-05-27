@@ -4,10 +4,21 @@
 
 <instance-profile id="wiki-en"
                  name="Wiki Serveroo EN"
-                 start-page="wiki-serveroo-en.md">
+                 start-page="FAQ.md">
 
-    <toc-element topic="wiki-serveroo-en.md"/>
-    <toc-element topic="Serveroo.md"/>
+    <toc-element topic="home.md"/>
+    <toc-element topic="userstory.md">
+        <toc-element topic="Account-Creation.md"/>
+        <toc-element topic="Server-selection-and-configuration.md"/>
+        <toc-element topic="Compiling-your-C-script.md"/>
+        <toc-element topic="Practical-work.md"/>
+    </toc-element>
+    <toc-element topic="Products.md">
+        <toc-element topic="NGINXen.md"/>
+        <toc-element topic="MySQL.md"/>
+        <toc-element topic="PHPen.md"/>
+        <toc-element topic="Nodeen.md"/>
+    </toc-element>
     <toc-element topic="FAQ.md"/>
     <toc-element topic="Privacy.md"/>
 </instance-profile>

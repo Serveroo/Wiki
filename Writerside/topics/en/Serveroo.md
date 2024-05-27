@@ -1,3 +1,0 @@
-# Serveroo
-
-Start typing here...

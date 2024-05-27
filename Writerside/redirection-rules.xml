@@ -18,4 +18,16 @@
         <description>Created after removal of "How to" from Wiki Serveroo</description>
         <accepts>How-to.html</accepts>
     </rule>
+    <rule id="4ffef495">
+        <description>Created after removal of "About Wiki Serveroo EN" from Wiki Serveroo EN</description>
+        <accepts>wiki-serveroo-en.html</accepts>
+    </rule>
+    <rule id="1ebdf113">
+        <description>Created after removal of "Serveroo" from Wiki Serveroo EN</description>
+        <accepts>Serveroo.html</accepts>
+    </rule>
+    <rule id="7aa277e9">
+        <description>Created after removal of "NGINX" from Wiki Serveroo EN</description>
+        <accepts>NGINXen.html</accepts>
+    </rule>
 </rules>
