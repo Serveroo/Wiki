@@ -1,7 +1,7 @@
 ## Serveur low-cost pour étudiants : Serveroo
 # Besoin d'un serveur pour votre projet étudiant ?
 
-En tant qu'étudiants à l'ISEN, nous sommes régulièrement amenés à réaliser des projets de groupe qui nécessitent un serveur. Que ce soit pour un "Curious Game" en deuxième année, un projet JavaScript en multi-joueurs, ou même pour les recherches de certains professeurs, le besoin d'un serveur fiable et abordable est omniprésent.
+En tant qu'étudiants à l'ISEN, nous sommes régulièrement amenés à réaliser des projets de groupe qui nécessitent un serveur. Que ce soit pour un "Cirious Game" en deuxième année, un projet JavaScript en multi-joueurs, ou même pour les recherches de certains professeurs, le besoin d'un serveur fiable et abordable est omniprésent.
 
 # Serveroo : la solution idéale pour les étudiants
 

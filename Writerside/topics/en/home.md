@@ -1,7 +1,7 @@
 ## Low-cost server for students : Serveroo
 # Need a server for your student project?
 
-As students at ISEN, we regularly have to carry out group projects that require a server. Whether it's for a ‘Curious Game’ in second year, a multi-player JavaScript project, or even for the research of certain professors, the need for a reliable and affordable server is omnipresent.
+As students at ISEN, we regularly have to carry out group projects that require a server. Whether it's for a ‘Cirious Game’ in second year, a multi-player JavaScript project, or even for the research of certain professors, the need for a reliable and affordable server is omnipresent.
 
 # Serveroo: the ideal solution for students
 
