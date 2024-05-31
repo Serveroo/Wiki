@@ -1,4 +1,4 @@
-# Legal
+# Légal
 
 ## Mention Légales
 
